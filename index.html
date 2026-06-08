@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pink Passport — Logo Approval & Brandbook</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory: #fbf6ef;
+      --warm-white: #fffaf3;
+      --champagne: #ead8bf;
+      --soft-champagne: #f4e8d8;
+      --dusty-rose: #d08b8a;
+      --rose-pop: #e7a4a5;
+      --rose-deep: #b96f6e;
+      --brushed-gold: #c49a58;
+      --taupe: #a8958a;
+      --espresso: #302019;
+      --cocoa: #4b352d;
+      --line: rgba(48,32,25,.14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--espresso);
+      background:
+        radial-gradient(circle at 15% 2%, rgba(231,164,165,.38), transparent 24%),
+        radial-gradient(circle at 90% 8%, rgba(196,154,88,.20), transparent 25%),
+        linear-gradient(135deg, #fffaf4 0%, #f7eadf 45%, #fff7f7 100%);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .032;
+      z-index: 50;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
+    }
+
+    img { max-width: 100%; display: block; }
+
+    .nav {
+      position: fixed;
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 60;
+      display: flex;
+      gap: 6px;
+      padding: 8px;
+      border: 1px solid rgba(196,154,88,.32);
+      border-radius: 999px;
+      background: rgba(255,250,243,.78);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 20px 70px rgba(48,32,25,.08);
+    }
+
+    .nav a {
+      color: var(--espresso);
+      text-decoration: none;
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .nav a:hover {
+      background: var(--dusty-rose);
+      color: var(--warm-white);
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 108px 7vw 76px;
+      position: relative;
+    }
+
+    .kicker {
+      color: var(--brushed-gold);
+      text-transform: uppercase;
+      letter-spacing: .28em;
+      font-size: 11px;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 300;
+    }
+
+    h1 {
+      font-size: clamp(58px, 8vw, 132px);
+      line-height: .86;
+      letter-spacing: .018em;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(42px, 5.6vw, 90px);
+      line-height: .92;
+      margin: 0 0 28px;
+      letter-spacing: .018em;
+    }
+
+    h3 {
+      font-size: clamp(28px, 3vw, 44px);
+      line-height: 1;
+      margin: 0 0 14px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: rgba(48,32,25,.74);
+      margin: 0;
+    }
+
+    .approval-hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 120px 7vw 84px;
+      overflow: hidden;
+    }
+
+    .approval-hero::before {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 720px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(208,139,138,.28), rgba(234,216,191,.18) 42%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(2px);
+    }
+
+    .approval-hero::after {
+      content: "";
+      position: absolute;
+      inset: 10vh 8vw;
+      border: 1px solid rgba(196,154,88,.22);
+      border-radius: 36px;
+      pointer-events: none;
+    }
+
+    .approval-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1100px, 100%);
+    }
+
+    .approval-pill {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 26px;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: rgba(255,250,243,.82);
+      border: 1px solid rgba(196,154,88,.35);
+      color: var(--rose-deep);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      box-shadow: 0 14px 45px rgba(48,32,25,.06);
+    }
+
+    .approval-title {
+      max-width: 940px;
+      margin: 0 auto 34px;
+    }
+
+    .approval-title span {
+      color: var(--dusty-rose);
+      font-style: italic;
+    }
+
+    .logo-stage {
+      position: relative;
+      width: min(880px, 100%);
+      margin: 42px auto 30px;
+      padding: clamp(28px, 5vw, 70px);
+      border-radius: 42px;
+      border: 1px solid rgba(196,154,88,.35);
+      background: var(--warm-white);
+      box-shadow: 0 34px 110px rgba(48,32,25,.12);
+      transition: .55s ease;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .logo-stage::before {
+      content: "hover para versão negativa";
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      z-index: 2;
+      color: rgba(48,32,25,.45);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: .35s ease;
+    }
+
+    .logo-stage::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(208,139,138,.20), transparent 28%),
+        radial-gradient(circle at 85% 90%, rgba(196,154,88,.16), transparent 30%);
+      pointer-events: none;
+      transition: .55s ease;
+    }
+
+    .logo-stage img {
+      position: relative;
+      z-index: 1;
+      width: min(760px, 100%);
+      margin: 0 auto;
+      transition: .55s ease;
+    }
+
+    .logo-stage:hover {
+      background: var(--espresso);
+      transform: translateY(-6px);
+      box-shadow: 0 44px 130px rgba(48,32,25,.22);
+      border-color: rgba(255,250,243,.32);
+    }
+
+    .logo-stage:hover::before {
+      color: rgba(255,250,243,.62);
+      content: "versão negativa";
+    }
+
+    .logo-stage:hover img {
+      filter: brightness(0) invert(97%) sepia(15%) saturate(270%) hue-rotate(333deg) brightness(104%) contrast(97%);
+      transform: scale(.98);
+    }
+
+    .approval-copy {
+      max-width: 740px;
+      margin: 0 auto;
+      font-size: 17px;
+    }
+
+    .mobile-note {
+      display: none;
+      margin-top: 12px;
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--rose-deep);
+      font-weight: 600;
+    }
+
+    .micro-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      width: min(860px, 100%);
+      margin: 34px auto 0;
+    }
+
+    .micro-card {
+      border-radius: 22px;
+      padding: 18px;
+      min-height: 98px;
+      background: rgba(255,250,243,.72);
+      border: 1px solid rgba(196,154,88,.24);
+      display: grid;
+      place-items: center;
+    }
+
+    .micro-card img {
+      max-height: 70px;
+      object-fit: contain;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 5vw;
+      align-items: center;
+    }
+
+    .intro-image {
+      position: relative;
+      min-height: 650px;
+      border-radius: 280px 280px 20px 20px;
+      overflow: hidden;
+      border: 1px solid rgba(196,154,88,.28);
+      box-shadow: 0 38px 110px rgba(48,32,25,.13);
+    }
+
+    .intro-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+    }
+
+    .intro-caption {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 30px;
+      background: var(--ivory);
+      padding: 28px;
+      border: 1px solid rgba(196,154,88,.25);
+    }
+
+    .editorial-line {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 42px;
+      color: var(--brushed-gold);
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .editorial-line::before {
+      content: "";
+      width: 80px;
+      height: 1px;
+      background: var(--brushed-gold);
+    }
+
+    .signature-section {
+      background:
+        linear-gradient(135deg, rgba(255,250,243,.54), rgba(244,232,216,.34));
+    }
+
+    .logo-showcase {
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 30px;
+      align-items: stretch;
+      margin-top: 44px;
+    }
+
+    .logo-main-card {
+      min-height: 620px;
+      background: var(--warm-white);
+      border: 1px solid rgba(196,154,88,.28);
+      display: grid;
+      place-items: center;
+      padding: 54px;
+      box-shadow: 0 26px 90px rgba(48,32,25,.08);
+    }
+
+    .logo-main-card img {
+      width: min(860px, 92%);
+    }
+
+    .meaning-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .meaning-card {
+      background: rgba(255,250,243,.60);
+      border: 1px solid rgba(196,154,88,.26);
+      padding: 32px;
+    }
+
+    .meaning-card .number {
+      font-size: 11px;
+      color: var(--brushed-gold);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .meaning-card h3 {
+      color: var(--rose-deep);
+      font-size: 34px;
+    }
+
+    .signatures-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 44px;
+    }
+
+    .signature-card {
+      min-height: 420px;
+      background: var(--warm-white);
+      border: 1px solid rgba(196,154,88,.28);
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 22px 70px rgba(48,32,25,.06);
+      transition: .35s ease;
+    }
+
+    .signature-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 34px 90px rgba(48,32,25,.12);
+    }
+
+    .signature-preview {
+      min-height: 230px;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .signature-preview img {
+      max-height: 230px;
+      object-fit: contain;
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .swatch {
+      min-height: 330px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border: 1px solid rgba(48,32,25,.08);
+      box-shadow: 0 22px 70px rgba(48,32,25,.07);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .swatch::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(130deg, rgba(255,255,255,.26), transparent 42%, rgba(0,0,0,.04));
+    }
+
+    .swatch h3, .swatch span, .swatch p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .swatch h3 { font-size: 30px; }
+    .swatch span {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .swatch p { font-size: 13px; line-height: 1.55; }
+
+    .type-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      margin-top: 44px;
+    }
+
+    .type-card {
+      min-height: 480px;
+      background: var(--warm-white);
+      border: 1px solid rgba(196,154,88,.28);
+      padding: 42px;
+    }
+
+    .type-primary {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(58px, 7vw, 112px);
+      line-height: .86;
+      color: var(--dusty-rose);
+      margin: 34px 0;
+    }
+
+    .type-secondary {
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: clamp(40px, 5vw, 74px);
+      line-height: 1;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--espresso);
+      margin: 42px 0;
+      font-weight: 300;
+    }
+
+    .alphabet {
+      font-size: 13px;
+      letter-spacing: .18em;
+      line-height: 2;
+      color: rgba(48,32,25,.66);
+      word-break: break-word;
+    }
+
+    .application-color-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-top: 42px;
+    }
+
+    .logo-color-card {
+      min-height: 260px;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      border: 1px solid rgba(48,32,25,.1);
+      transition: .35s ease;
+    }
+
+    .logo-color-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 70px rgba(48,32,25,.12);
+    }
+
+    .logo-color-card img {
+      max-width: 88%;
+      max-height: 140px;
+      object-fit: contain;
+    }
+
+    .filter-ivory {
+      filter: brightness(0) invert(97%) sepia(15%) saturate(270%) hue-rotate(333deg) brightness(104%) contrast(97%);
+    }
+
+    .filter-espresso {
+      filter: brightness(0) saturate(100%) invert(12%) sepia(16%) saturate(999%) hue-rotate(342deg) brightness(93%) contrast(92%);
+    }
+
+    .application-gallery {
+      background: var(--warm-white);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 44px;
+    }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 520px;
+      border: 1px solid rgba(196,154,88,.24);
+      box-shadow: 0 24px 80px rgba(48,32,25,.08);
+      background: var(--champagne);
+    }
+
+    .gallery-card.large { grid-column: span 7; min-height: 720px; }
+    .gallery-card.medium { grid-column: span 5; min-height: 720px; }
+    .gallery-card.small { grid-column: span 4; }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      transition: .55s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.035);
+    }
+
+    .gallery-label {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      right: 24px;
+      padding: 22px;
+      background: var(--ivory);
+      border: 1px solid rgba(196,154,88,.22);
+    }
+
+    .gallery-label h3 {
+      font-size: 30px;
+      color: var(--rose-deep);
+    }
+
+    .fashion-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 44px;
+    }
+
+    .fashion-card {
+      position: relative;
+      min-height: 690px;
+      overflow: hidden;
+      border: 1px solid rgba(196,154,88,.24);
+      box-shadow: 0 24px 80px rgba(48,32,25,.08);
+    }
+
+    .fashion-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      transition: .55s ease;
+    }
+
+    .fashion-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .fashion-copy {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      background: var(--warm-white);
+      padding: 26px;
+      border: 1px solid rgba(196,154,88,.22);
+    }
+
+    .fashion-copy h3 {
+      color: var(--rose-deep);
+      font-size: 36px;
+    }
+
+    .textile-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 44px;
+    }
+
+    .textile-card {
+      min-height: 300px;
+      background: var(--warm-white);
+      border: 1px solid rgba(196,154,88,.28);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .textile-card h3 {
+      color: var(--rose-deep);
+      font-size: 32px;
+    }
+
+    .textile-card img {
+      max-height: 92px;
+      object-fit: contain;
+      align-self: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      min-height: 380px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 80px 7vw;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255,250,243,.28), transparent 38%),
+        linear-gradient(135deg, var(--dusty-rose), #c37b7b);
+      color: var(--ivory);
+    }
+
+    .footer img {
+      width: min(560px, 82vw);
+      filter: brightness(0) invert(97%) sepia(15%) saturate(270%) hue-rotate(333deg) brightness(104%) contrast(97%);
+      margin: 0 auto 34px;
+    }
+
+    .footer h2 {
+      font-size: clamp(42px, 5.5vw, 86px);
+      margin-bottom: 18px;
+    }
+
+    .footer p {
+      color: rgba(255,250,243,.80);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 11px;
+    }
+
+    /* Mobile: automatic logo color inversion because hover doesn't exist on touch screens */
+    @media (hover: none) and (pointer: coarse) {
+      .mobile-note {
+        display: block;
+      }
+
+      .logo-stage {
+        animation: mobileLogoStage 5.4s ease-in-out infinite;
+      }
+
+      .logo-stage img {
+        animation: mobileLogoInvert 5.4s ease-in-out infinite;
+      }
+
+      .logo-stage::before {
+        content: "toque / versão dinâmica";
+        animation: mobileHintColor 5.4s ease-in-out infinite;
+      }
+
+      .logo-stage:active {
+        transform: scale(.985);
+      }
+    }
+
+    @keyframes mobileLogoStage {
+      0%, 42%, 100% {
+        background: var(--warm-white);
+        border-color: rgba(196,154,88,.35);
+        box-shadow: 0 34px 110px rgba(48,32,25,.12);
+      }
+      52%, 82% {
+        background: var(--espresso);
+        border-color: rgba(255,250,243,.32);
+        box-shadow: 0 44px 130px rgba(48,32,25,.22);
+      }
+    }
+
+    @keyframes mobileLogoInvert {
+      0%, 42%, 100% {
+        filter: none;
+        transform: scale(1);
+      }
+      52%, 82% {
+        filter: brightness(0) invert(97%) sepia(15%) saturate(270%) hue-rotate(333deg) brightness(104%) contrast(97%);
+        transform: scale(.98);
+      }
+    }
+
+    @keyframes mobileHintColor {
+      0%, 42%, 100% {
+        color: rgba(48,32,25,.45);
+      }
+      52%, 82% {
+        color: rgba(255,250,243,.62);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .nav { display: none; }
+      section { padding: 74px 24px; }
+      .approval-hero::after { inset: 84px 18px 28px; border-radius: 26px; }
+      .micro-gallery, .intro, .logo-showcase, .type-grid, .fashion-grid {
+        grid-template-columns: 1fr;
+      }
+      .palette, .application-color-grid, .textile-grid, .signatures-grid {
+        grid-template-columns: 1fr;
+      }
+      .intro-image { min-height: 520px; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-card.large, .gallery-card.medium, .gallery-card.small {
+        grid-column: span 1;
+        min-height: 540px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <a href="#aprovacao">Logo</a>
+    <a href="#conceito">Conceito</a>
+    <a href="#sistema">Sistema</a>
+    <a href="#cores">Cores</a>
+    <a href="#fontes">Fontes</a>
+    <a href="#aplicacoes">Aplicações</a>
+    <a href="#moda">Moda</a>
+  </nav>
+
+  <section class="approval-hero" id="aprovacao">
+    <div class="approval-inner">
+      <div class="approval-pill">Proposta final de identidade · Pink Passport</div>
+      <h1 class="approval-title">A marca que transforma viagem em <span>ritual de estilo.</span></h1>
+
+      <div class="logo-stage" title="Passe o mouse para ver a versão negativa">
+        <img src="assets/logo_primary.png" alt="Logo principal Pink Passport">
+      </div>
+
+      <p class="approval-copy">Um logo com linguagem de moda, símbolo de jornada e presença suficiente para nascer em acessórios personalizados e evoluir para roupas, etiquetas, embalagens e coleções autorais.</p>
+      <p class="approval-copy mobile-note">No mobile, a aplicação do logo alterna automaticamente entre a versão clara e a versão negativa.</p>
+
+      <div class="micro-gallery">
+        <div class="micro-card"><img src="assets/logo_monogram.png" alt="Monograma PP"></div>
+        <div class="micro-card"><img src="assets/logo_seal.png" alt="Selo Pink Passport"></div>
+        <div class="micro-card"><img src="assets/logo_vertical.png" alt="Assinatura vertical"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro" id="conceito">
+    <div>
+      <div class="kicker">Conceito visual</div>
+      <h2>Jovem, elegante e desejável — sem perder sofisticação.</h2>
+      <p>A Pink Passport mantém um luxo claro e feminino, mas com mais frescor visual: rosa mais presente, ritmo editorial, fotos de moda, aplicações reais e um universo de marca pronto para acessórios, gifting, viagem e roupa.</p>
+      <p style="margin-top:18px;">A marca nasce no território de viagem e beleza, mas já comunica um ecossistema de lifestyle: roupas leves, acessórios de viagem, personalização, presentes e coleções autorais.</p>
+      <div class="editorial-line">Visual merchandising · fashion lifestyle</div>
+    </div>
+
+    <div class="intro-image">
+      <img src="assets/fashion_boutique.png" alt="Roupas femininas Pink Passport">
+      <div class="intro-caption">
+        <div class="kicker" style="margin-bottom:10px;">Fashion direction</div>
+        <p>Uma moda feminina jovem, suave e elegante: cetim, alfaiataria leve, tons rosados, champagne e detalhes de marca em tags e embalagens.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="signature-section" id="sistema">
+    <div class="kicker">Sistema de marca</div>
+    <h2>Logo principal e assinaturas.</h2>
+    <p style="max-width:850px;">O sistema visual foi pensado para funcionar do site ao produto físico: logo principal para presença institucional, monograma para aplicação têxtil, selo para gifting e assinatura vertical para peças editoriais.</p>
+
+    <div class="logo-showcase">
+      <div class="logo-main-card">
+        <img src="assets/logo_primary.png" alt="Logo principal Pink Passport">
+      </div>
+
+      <div class="meaning-grid">
+        <div class="meaning-card">
+          <div class="number">Elemento 01</div>
+          <h3>Bússola</h3>
+          <p>Direção, destino e descoberta. Visualmente, ela cria um símbolo com leitura de joia gráfica, ideal para pingente, tag, embalagem e aviamento.</p>
+        </div>
+        <div class="meaning-card">
+          <div class="number">Elemento 02</div>
+          <h3>Serifa leve</h3>
+          <p>A Cormorant Garamond Light traz sofisticação editorial, mas mantém feminilidade e leveza.</p>
+        </div>
+        <div class="meaning-card">
+          <div class="number">Elemento 03</div>
+          <h3>Assinaturas</h3>
+          <p>O monograma, o selo e o wordmark vertical tornam a marca flexível para moda, produto, embalagem e redes sociais.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="signatures-grid">
+      <div class="signature-card">
+        <div class="signature-preview"><img src="assets/logo_monogram.png" alt="Monograma PP"></div>
+        <div><h3>Monograma PP</h3><p>O caminho mais forte para bordado, bolso, etiqueta interna, zíper e detalhes de produto.</p></div>
+      </div>
+      <div class="signature-card">
+        <div class="signature-preview"><img src="assets/logo_seal.png" alt="Selo circular"></div>
+        <div><h3>Selo circular</h3><p>Perfeito para embalagem, lacre, tag, adesivo e experiência de presente.</p></div>
+      </div>
+      <div class="signature-card">
+        <div class="signature-preview"><img src="assets/logo_vertical.png" alt="Wordmark vertical"></div>
+        <div><h3>Wordmark vertical</h3><p>Assinatura de impacto para capas, posts, papelaria e composições editoriais.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cores">
+    <div class="kicker">Cores oficiais</div>
+    <h2>Uma paleta mais jovem, ainda premium.</h2>
+    <p style="max-width:850px;">A base continua sofisticada, mas o dusty rose ganha mais protagonismo para deixar o universo mais jovem, feminino e memorável.</p>
+
+    <div class="palette">
+      <div class="swatch" style="background:#d08b8a;color:#fffaf3;">
+        <h3>Dusty Rose</h3><span>#D08B8A</span><p style="color:rgba(255,250,243,.78)">Assinatura principal. Traz juventude, feminilidade e presença de marca.</p>
+      </div>
+      <div class="swatch" style="background:#ead8bf;color:#302019;">
+        <h3>Champagne</h3><span>#EAD8BF</span><p>Base elegante para embalagem, fundo e universo de presente.</p>
+      </div>
+      <div class="swatch" style="background:#c49a58;color:#fffaf3;">
+        <h3>Brushed Gold</h3><span>#C49A58</span><p style="color:rgba(255,250,243,.78)">Detalhe metálico para zíper, hot stamping, pingente e aviamento.</p>
+      </div>
+      <div class="swatch" style="background:#fbf6ef;color:#302019;">
+        <h3>Ivory</h3><span>#FBF6EF</span><p>Respiro editorial para site, papelaria e apresentações.</p>
+      </div>
+      <div class="swatch" style="background:#302019;color:#fffaf3;">
+        <h3>Espresso</h3><span>#302019</span><p style="color:rgba(255,250,243,.78)">Contraste premium para sacolas, caixas e versões negativas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fontes">
+    <div class="kicker">Tipografia</div>
+    <h2>Elegância editorial + leitura contemporânea.</h2>
+
+    <div class="type-grid">
+      <div class="type-card">
+        <div class="kicker">Fonte primária</div>
+        <div class="type-primary">Cormorant<br>Garamond<br>Light</div>
+        <p>Fonte usada no logo e nos títulos de impacto. Carrega a estética de moda, beleza e sofisticação feminina.</p>
+        <div class="alphabet" style="margin-top:28px;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</div>
+      </div>
+      <div class="type-card">
+        <div class="kicker">Fonte secundária</div>
+        <div class="type-secondary">Montserrat</div>
+        <p>Fonte de apoio oficial para e-commerce, textos comerciais, menus, legendas e informações de produto. Mais jovem, limpa e funcional.</p>
+        <div class="alphabet" style="margin-top:28px;font-family:'Montserrat',Arial,sans-serif;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aplicacoes">
+    <div class="kicker">Aplicações cromáticas</div>
+    <h2>O logo em fundos de marca.</h2>
+
+    <div class="application-color-grid">
+      <div class="logo-color-card" style="background:#fbf6ef;"><img src="assets/logo_vertical.png" alt="Logo rose sobre ivory"></div>
+      <div class="logo-color-card" style="background:#d08b8a;"><img class="filter-ivory" src="assets/logo_vertical.png" alt="Logo ivory sobre rose"></div>
+      <div class="logo-color-card" style="background:#ead8bf;"><img class="filter-espresso" src="assets/logo_vertical.png" alt="Logo espresso sobre champagne"></div>
+      <div class="logo-color-card" style="background:#302019;"><img src="assets/logo_vertical.png" alt="Logo rose sobre espresso"></div>
+      <div class="logo-color-card" style="background:#c49a58;"><img class="filter-ivory" src="assets/logo_vertical.png" alt="Logo ivory sobre gold"></div>
+    </div>
+
+    <div class="kicker" style="margin-top:72px;">Versões negativas</div>
+    <h2>Para embalagens, sacolas e peças especiais.</h2>
+
+    <div class="application-color-grid">
+      <div class="logo-color-card" style="background:#302019;"><img class="filter-ivory" src="assets/logo_primary.png" alt="Logo negativo"></div>
+      <div class="logo-color-card" style="background:#d08b8a;"><img class="filter-ivory" src="assets/logo_primary.png" alt="Logo negativo rose"></div>
+      <div class="logo-color-card" style="background:#a8958a;"><img class="filter-ivory" src="assets/logo_primary.png" alt="Logo negativo taupe"></div>
+      <div class="logo-color-card" style="background:#c49a58;"><img class="filter-espresso" src="assets/logo_primary.png" alt="Logo espresso sobre gold"></div>
+      <div class="logo-color-card" style="background:#fbf6ef;"><img class="filter-espresso" src="assets/logo_primary.png" alt="Logo espresso sobre ivory"></div>
+    </div>
+  </section>
+
+  <section class="application-gallery">
+    <div class="kicker">Aplicações em produtos</div>
+    <h2>Do unboxing ao detalhe de marca.</h2>
+    <p style="max-width:850px;">As imagens simulam a presença da marca em sacolas, caixas, tags, necessaires, selos e produtos de viagem — reforçando a percepção de presente e coleção.</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-card large">
+        <img src="assets/app_branding.png" alt="Aplicação do logo principal em produtos">
+        <div class="gallery-label"><h3>Logo principal</h3><p>Assinatura institucional em sacola, caixa e cenário de marca.</p></div>
+      </div>
+      <div class="gallery-card medium">
+        <img src="assets/app_travel.png" alt="Aplicação em acessórios de viagem">
+        <div class="gallery-label"><h3>Travel branding</h3><p>Marca aplicada em acessórios e cenas ligadas à viagem sofisticada.</p></div>
+      </div>
+      <div class="gallery-card small">
+        <img src="assets/app_product_set.png" alt="Conjunto de produtos Pink Passport">
+        <div class="gallery-label"><h3>Product set</h3><p>Conjunto de produtos com presença elegante da marca.</p></div>
+      </div>
+      <div class="gallery-card small">
+        <img src="assets/app_pink_gold.png" alt="Aplicação em rosa e ouro">
+        <div class="gallery-label"><h3>Pink & gold</h3><p>Estética premium para embalagem, gifting e exibição.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="moda">
+    <div class="kicker">Universo de moda</div>
+    <h2>Roupas femininas jovens, suaves e elegantes.</h2>
+    <p style="max-width:850px;">A expansão para moda preserva o refinamento, mas traz mais juventude por meio de styling, cetim, tons rosados, peças leves e presença sutil da marca em etiquetas, bolsos, tags e embalagens.</p>
+
+    <div class="fashion-grid">
+      <div class="fashion-card">
+        <img src="assets/fashion_boutique.png" alt="Coleção feminina jovem e elegante Pink Passport">
+        <div class="fashion-copy"><h3>Soft wardrobe</h3><p>Cetim, alfaiataria leve e tons claros para um guarda-roupa feminino contemporâneo.</p></div>
+      </div>
+      <div class="fashion-card">
+        <img src="assets/fashion_soft_luxury.png" alt="Moda leve e elegante Pink Passport">
+        <div class="fashion-copy"><h3>Soft luxury</h3><p>Peças e styling com feminilidade delicada e linguagem de coleção.</p></div>
+      </div>
+      <div class="fashion-card">
+        <img src="assets/fashion_resort.png" alt="Moda de viagem e resortwear Pink Passport">
+        <div class="fashion-copy"><h3>Resort mood</h3><p>A marca pode viver em malas, tags, vestidos leves, roupas de viagem e peças de verão.</p></div>
+      </div>
+      <div class="fashion-card">
+        <img src="assets/fashion_unboxing.png" alt="Unboxing de roupas Pink Passport">
+        <div class="fashion-copy"><h3>Fashion unboxing</h3><p>Embalagem, papel de seda, etiqueta e caixa reforçam o desejo da compra.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Merchandising visual & têxtil</div>
+    <h2>Elementos que viram produto.</h2>
+
+    <div class="textile-grid">
+      <div class="textile-card">
+        <img src="assets/logo_monogram.png" alt="Monograma PP">
+        <div><h3>Bordado</h3><p>Monograma no bolso, punho, nécessaire, robe, camisa e etiqueta interna.</p></div>
+      </div>
+      <div class="textile-card">
+        <img src="assets/logo_seal.png" alt="Selo circular">
+        <div><h3>Lacre</h3><p>Selo circular em caixa, tag, adesivo, papel de seda e coleção especial.</p></div>
+      </div>
+      <div class="textile-card">
+        <img src="assets/logo_primary.png" alt="Logo principal">
+        <div><h3>Embalagem</h3><p>Logo principal em sacola, caixa, cartão de agradecimento e site.</p></div>
+      </div>
+      <div class="textile-card">
+        <img src="assets/logo_vertical.png" alt="Wordmark vertical">
+        <div><h3>Editorial</h3><p>Assinatura vertical em posts, catálogo, capa de coleção e lookbook.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <img src="assets/logo_primary.png" alt="Pink Passport">
+      <h2>Fresh elegance for every journey.</h2>
+      <p>Pink Passport · Logo approval & visual brandbook</p>
+    </div>
+  </footer>
+</body>
+</html>
